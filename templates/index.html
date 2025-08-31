@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}StimLink@{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="https://kit.fontawesome.com/c58d18ca53.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <header class="entete">
+        <div class="logo"><span>S</span>timsone<span>.</span></div>
+        <nav class="nav-links" id="navLinks">
+            <span class="close-btn" id="closeBtn">✖</span>
+            <ul class="menu" id="menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </header>
+
+    <!-- ===== SECTION ACCUEIL ===== -->
+    <div class="corps" id="accueil">
+        <div class="cgauche">
+            <span class="textB">Salut</span>
+            <h1>Je suis <span id="element"></span></h1>
+            <p>Ingénieur en Génie électrique | Spécialiste aux énergies renouvelables | Informaticien | Programmeur en
+                Python et développeur Web HTML & CSS | Rédacteur | Spécialiste en Gestion des projets | Entrepreneur</p>
+            <div class="btn2">
+                <a href="{{ url_for('static', filename='CV SIVI KIALA STIMSONE.pdf') }}" download>
+                  <button>Télécharger CV</button>
+                </a>
+                <a href="{{ url_for('static', filename='SIVI Stimsone.JPG')}}" download>
+                  <button>Télécharger ma photo</button>
+                </a>
+            </div>
+        </div>
+        <div class="cdroite">
+            <div class="groupImg">
+                <img src="{{ url_for('static', filename='arrière_plan_sivi2.jpg') }}" width="500" alt="Photo de présentation">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== SECTION COMPETENCES ===== -->
+<div id="competences">
+    <div class="container">
+        <div class="row">
+            <div class="comp-col-1">
+                <img src="{{ url_for('static', filename='Logo_Renewable_Energy.svg.png') }}" width="500" alt="Photo de présentation">
+            </div>
+            <div class="comp-col-2">
+                <h1 class="sub-title">Mes compétences</h1>
+                <p>Voici l'aperçu de mes compétences comportementales (soft skills) et techniques</p>
+
+                <!-- Onglets -->
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('soft-skills')">Soft-skills</p>
+                    <p class="tab-links" onclick="opentab('techniques')">Techniques</p>
+                    <p class="tab-links" onclick="opentab('complementary')">Complémentaires</p>
+                </div>
+
+                <!-- Contenus -->
+                <div class="tab-contents active-tab" id="soft-skills">
+                    <ul>
+                        <li>Gestion du stress</li>
+                        <li>Écoute active</li>
+                        <li>Travail d'équipe</li>
+                        <li>Sens de l'organisation</li>
+                        <li>Communication efficace</li>
+                        <li>Leadership</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="techniques">
+                    <ul>
+                        <li>Électricité bâtiment</li>
+                        <li>Installation et dimensionnement de projet solaire photovoltaïque</li>
+                        <li>Programmation en Python</li>
+                        <li>Développement web en FLASK, HTML/CSS/JAVASCRIPT</li>
+                        <li>Création et gestion de base de données SQLite</li>
+                        <li>Développement des modèles machine learning</li>
+                        <li>Informatique bureautique (Word, Excel, Powerpoint et Publisher)</li>
+                        <li>Électronique embarqué (Arduino)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="complementary">
+                    <ul>
+                        <li>Gestion de projets</li>
+                        <li>Rédaction scientifique</li>
+                        <li>Entrepreneuriat</li>
+                        <li>Techniques Agricole</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ===== SECTION PROJETS ===== -->
+<div id="projets">
+    <div class="container">
+        <h1 class="sub-title">Mes projets</h1>
+        <div class="project-list">
+            <div>
+                <h2>Installation électrique BT d'une habitation</h2>
+                <h4 style="color: white"><strong>Description: </strong>3 chambres, salon, salle de bain, cuisine et terrasse</h4>
+                <p>Réalisation complète du réseau électrique basse tension d’une habitation, incluant la mise en place
+                    du tableau général, du câblage, de la protection différentielle et des circuits spécialisés selon
+                    les normes de sécurité électrique.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Installation électrique BT d'une habitation</h2>
+                <h4 style="color: white"><strong>Description: </strong>3 habitations dont 2 habitations <i>2 chambres et
+                    salon</i> et 1 habitation <i>3 chambres et salon</i></h4>
+                <p>Étude et exécution d’installations électriques domestiques, avec optimisation du dimensionnement
+                    des câbles et disjoncteurs pour assurer fiabilité, sécurité et efficacité énergétique.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Maintenance corrective d’un tableau divisionnaire BT</h2>
+                <p>Diagnostic et réparation d’un coffret de distribution basse tension, incluant le remplacement de
+                    composants défectueux et la remise en conformité du système.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Maintenance préventive d’un système solaire photovoltaïque de 10 kWc</h2>
+                <p>Inspection, nettoyage et vérification des modules solaires, contrôles des onduleurs et du câblage,
+                    vérification des batteries (changement d'une d'entre elles) afin de garantir un rendement optimal
+                    et prolonger la durée de vie du système.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Réalisation d’une micro centrale hydroélectrique d'une puissance de 850 kVA</h2>
+                <p>Conception et participation à l’installation d’un système hydroélectrique à petite échelle,
+                    intégrant turbine, alternateur et régulation dans le
+                    cadre du prototypage pour l'évaluation de l'impact des systèmes décentralisés et du mix énergétique.
+                </p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Conception d’un pico-digesteur pour la production de biogaz</h2>
+                <p>Développement d’un prototype de digesteur destiné à produire un gaz écologique afin
+                    de valoriser les déchets organiques et contribuer à une solution énergétique durable.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Conception d’une micro-station d’énergie électrique changeable et transportable</h2>
+                <p>Élaboration d’un système modulaire et mobile de stockage et distribution électrique, adapté aux
+                    besoins ponctuels d’électrification en zones isolées.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Création d’une application de gestion scolaire en Python (SQLite & Tkinter)</h2>
+                <p>Développement d’une solution logicielle locale permettant la gestion des élèves, des cours et des
+                    résultats, intégrant une interface graphique intuitive et une base de données embarquée.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Développement d’un logiciel de détection de visage (pré-reconnaissance faciale)</h2>
+                <p>Conception d’un programme basé sur l’apprentissage machine pour détecter automatiquement des visages
+                    en temps réel, étape préalable à la reconnaissance faciale et biométrique.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Développement d’un logiciel de dimensionnement des installations électriques bâtiment et
+                    solaires PV</h2>
+                <p>Réalisation d’un outil informatique d’aide à la conception et au dimensionnement des réseaux
+                    électriques et systèmes photovoltaïques, garantissant conformité et optimisation technique.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Création d’un site web responsive de gestion des comptes épargnes</h2>
+                <p>Développement d’une plateforme web sécurisée permettant la gestion des comptes clients, intégrant
+                    authentification, suivi des transactions et interface responsive adaptée aux mobiles.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+            <div>
+                <h2>Création d’un site web E-commerce</h2>
+                <p>Mise en place d’une boutique en ligne fonctionnelle avec gestion des produits, panier d’achat,
+                    paiement et interface utilisateur optimisée pour une expérience fluide.</p>
+                <a href="#">En savoir plus</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ===== SERVICES ===== -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Mes services</h1>
+        <div class="services-list">
+            <div class="service">
+                <img src="static/schema électrique.jpg" width="500" class="m-image" style="">
+                <div class="layer">
+                    <h3>Installation électrique bâtiment</h3>
+                    <p>Donnez nous la charge de réaliser vos rêves, en nous confiant vos projets d'installation
+                        électrique bâtiment, dans le délai convenable et dans les normes internationales</p>
+                    <a href="#"><img src="static/address-card.png" width="30"></a>
+                </div>
+            </div>
+            <div class="service">
+                <img src="static/Système PV.jpg" width="500" class="m-image">
+                <div class="layer">
+                    <h3>Dimensionnement de système solaire photovoltaïque</h3>
+                    <p>L'énergie renouvelable et propre. Un bon dimensionnement est une porte d'entrée vers
+                        l'indépendance énergétique. Optimisez votre installation solaire, et assurer une longévité
+                        de vos équipements en nous confiant le dimensionnement professionnel et stricte de votre
+                        projet d'installation des panneaux solaire.</p>
+                    <a href="#"><img src="static/address-card.png" width="30"></a>
+                </div>
+            </div>
+            <div class="service">
+                <img src="static/Maintenance.jpg" width="500" class="m-image">
+                <div class="layer">
+                    <h3>Maintenance préventive et corrective</h3>
+                    <p>La maintenance préventive vous permet de prévenir aux potentielles pannes à venir et
+                        vous fait économiser de l'argent et vous maintient en sécurité.<br>
+                        La maintenance corrective est le fait de réparer une panne occasionnant un dysfonctionnement
+                        du système. Faites appel aux experts pour maximiser la sécurité de personnes et de vos
+                        équipements.
+                    </p>
+                    <a href="#"><img src="static/address-card.png" width="30"></a>
+                </div>
+            </div>
+            <div class="service">
+                <img src="static/programmation.jpg" width="500" class="m-image">
+                <div class="layer">
+                    <h3>Création des applications de bureau</h3>
+                    <p>Vos tâches quotidiennes seront désormais facilitées grâce à l'application des gesions personnalisé
+                        de votre business (boutique, établissement, etc...). Gagner du temps et assurer le suivi
+                        régulier de vos opérations.</p>
+                    <a href="#"><img src="static/address-card.png" width="30"></a>
+                </div>
+            </div>
+            <div class="service">
+                <img src="static/Dev web.jpg" width="500" class="m-image">
+                <div class="layer">
+                    <h3>Développement des sites web responsive</h3>
+                    <p>Quel que soit vos activités, votre entreprise, nous mettrons à votre disposition un site web
+                        responsive sur mesure pour répondre à vos attentes.</p>
+                    <a href="#"><img src="static/address-card.png" width="30"></a>
+                </div>
+            </div>
+            <div class="service">
+                <img src="static/Analyse de données.jpg" width="500" class="m-image">
+                <div class="layer">
+                    <h3>Analyse des données</h3>
+                    <p>Nous produisons par jour de millions de tera des données, les analysées pour tirer des
+                        conclusions permet de rentabiliser et de maximiser la fiabilité d'une décision.
+                    Vos données peuvent vous aider à prédire les futures opérations, valeurs, ventes, achats...</p>
+                    <a href="#"><img src="static/address-card.png" width="30"></a>
+                </div>
+            </div>
+            <div class="service">
+                <img src="static/Modele ML.jpg" width="500" class="m-image">
+                <div class="layer">
+                    <h3>Développement des modèles de l'intelligence artificielle (Machine Learning)</h3>
+                    <p>Aujourd'hui, grâce à l'IA les entreprises réussissent à toucher à l'endroit qu'il faut
+                    et au moment nécessaire. Vous pouvez nous confier cette mission de vous développer un ou plusieurs
+                        modèles de l'IA (Machine Learning) afin de maximiser vos revenus.</p>
+                    <a href="#"><img src="static/address-card.png" width="30"></a>
+                </div>
+            </div>
+            <div class="service">
+                <img src="static/Gestion des projets.jpg" width="500" class="m-image">
+                <div class="layer">
+                    <h3>Etude de faisabilité des projets techniques</h3>
+                    <p>Plusieurs projets aujourd'hui échouent parce que le maître d'œuvre et le maître d'ouvrage
+                    ne parviennent pas à créer un environnement de confiance et d'assurance. Un projet bien évaluer
+                    en avance peut aider le bailleur de fond à economiser énormement et à instaurer un environnement
+                    d'assurance et de confiance.</p>
+                    <a href="#"><img src="static/address-card.png" width="30"></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">Demander un devis</a>
+    </div>
+</div>
+
+<!-- ===== A PROPOS ===== -->
+<div id="apropos">
+    <div class="container">
+        <h1 class="sub-title">À propos de moi</h1>
+        <div class="ma-photo">
+            <img src="static/1000007685-removebg-preview.png" width="180">
+        </div>
+        <div class="bio card p-4">
+  <!-- 1er paragraphe (visible) -->
+    <p>
+        Je m’appelle <strong>SIVI KIALA Stimsone</strong>, né le 17 juin 2000 à Kinshasa, au sein d’une famille de cinq fils dont je suis
+        le deuxième. Dès mon jeune âge, j’ai toujours été animé par une curiosité intellectuelle et un profond désir de
+        comprendre le fonctionnement du monde qui m’entoure. Ce trait de caractère m’a naturellement conduit vers les
+        sciences techniques et m’a permis de construire un parcours académique solide, orienté vers l’innovation et le
+        progrès technologique.
+    </p>
+
+  <!-- Paragraphes cachés -->
+  <div class="bio-more" id="bio-more">
+    <p>Après avoir obtenu en 2018 mon diplôme en <strong>électricité industrielle</strong> à <strong>Institut
+        Technique Industriel de N’djili (ITI)</strong> avec 70 %, j’ai poursuivi mes études supérieures à
+        l'<strong>Institut Supérieur des Techniques Appliquées (ISTA</strong>. J'y ai choisi la filière <strong>
+        Génie Électrique</strong>, avec une spécialisation dans les <strong>énergies renouvelables</strong>,
+        convaincu que l’avenir de notre société dépendra de solutions énergétiques propres, accessibles et durables.
+        Cette orientation n’a fait que renforcer ma passion pour les technologies innovantes et leur impact dans la
+        transformation des communautés.
+    </p>
+    <p>
+      Ma soif d’apprendre va bien au-delà de l’académique : je m’efforce constamment d’élargir mes connaissances,
+        d’expérimenter et de me perfectionner. Je crois fermement que la compétence ne se limite pas aux diplômes,
+        mais s’entretient à travers une curiosité permanente, une discipline de travail et la volonté de relever des
+        défis. Chaque projet que j’entreprends est pour moi une opportunité d’apprendre davantage et de mettre en
+        pratique ce que j’ai acquis.
+    </p>
+    <p>
+      En février 2024, j’ai franchi une étape importante de ma vie en fondant <strong>StimLink</strong>, une plateforme
+        d’épargne et de commerce. Cette initiative est née de ma vision d’apporter des solutions concrètes aux défis
+        économiques et technologiques rencontrés par nos communautés. À travers StimLink, je cherche à allier innovation,
+        sécurité financière et inclusion technologique, afin de bâtir un meilleur avenir pour chaque utilisateur. C’est
+        pour moi une manière de contribuer activement à l’évolution socio-économique de notre société.
+    </p>
+    <p>
+      Au-delà de mes compétences techniques, je suis une personne déterminée, résiliente et guidée par des valeurs
+        fortes : le travail, l’intégrité et le service. Je crois en l’importance de la collaboration et je mets un
+        point d’honneur à partager mes connaissances avec les autres, convaincu que l’évolution collective passe par la
+        transmission et l’entraide.
+    </p>
+    <p>
+      Je suis également animé par une vision claire de mon avenir : devenir un acteur majeur de la transition
+        énergétique et technologique en Afrique. Pour cela, je continue de développer mes compétences, d’élargir
+        mes horizons et de me préparer à relever les grands défis de demain. Mon objectif est simple, mais ambitieux :
+        utiliser mon savoir et mon énergie pour contribuer à transformer notre société à travers des solutions durables,
+        innovantes et inclusives.
+    </p>
+    <p>
+    <p>
+      En résumé, je suis un jeune passionné par la technologie et les sciences appliquées, déterminé à mettre mon
+      parcours académique, mes projets entrepreneuriaux et mes ambitions personnelles au service du progrès. Chaque jour
+      est pour moi une nouvelle opportunité d’avancer, d’apprendre et de bâtir, avec confiance et persévérance, le futur
+      que je souhaite pour moi et pour ma communauté.
+    </p>
+  </div>
+
+  <!-- Bouton -->
+  <button class="btn btn-link p-0 bio-toggle" aria-controls="bio-more" aria-expanded="false"
+          style="text-decoration:none; color:white">
+    Lire la suite
+  </button>
+</div>
+
+    </div>
+</div>
+<!-- ===== CONTACT ===== -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contacts</h1>
+                <div class="social-icons">
+                    <a href="#"><img src="static/facebook1.png" width="30"></a>
+                    <a href="#"><img src="static/whatsapp.png" width="30"></a>
+                    <a href="#"><img src="static/e-mail.png" width="30"></a>
+                    <a href="#"><img src="static/linkedin1.png" width="30"></a>
+                    <a href="#"><img src="static/github.png" width=30"></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form id="contactForm">
+                    <input type="text" name="Name" placeholder="Votre noms" required>
+                    <input type="email" name="email" placeholder="Adresse e-mail" required>
+                    <textarea name="Message" rows="6" placeholder="Dites-nous, en quoi pourrions-nous vous aider ?"></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Message de confirmation -->
+<p id="successMsg" style="display:none; color:green; font-weight:bold;">
+  Merci pour votre message, je vous répondrai incessamment !
+</p>
+<div class="copyright">
+    <p>Copyright © Stimsone_2025</p>
+</div>
+<!-- ===== SCRIPTS ===== -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+var typed = new Typed('#element', {
+  strings: ['Ingénieur', 'Entrepreneur', 'Programmeur en Py', 'Développeur Fullstack'],
+  loop:true,
+  backSpeed: 100,
+  typeSpeed: 100,
+});
+</script>
+<script>
+// Onglets Compétences
+let tabLinks = document.querySelectorAll(".tab-links");
+let tabContents = document.querySelectorAll(".tab-contents");
+
+tabLinks.forEach((tab, i) => {
+  tab.addEventListener("click", () => {
+    tabLinks.forEach(t => t.classList.remove("active-link"));
+    tabContents.forEach(c => c.classList.remove("active-tab"));
+
+    tab.classList.add("active-link");
+    tabContents[i].classList.add("active-tab");
+  });
+});
+
+</script>
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const closeBtn = document.getElementById("closeBtn");
+
+    menuToggle.onclick = () => {
+      navLinks.classList.toggle("active");
+      document.body.classList.toggle("menu-open"); // ✅ bloque/débloque le scroll
+    };
+
+    if (closeBtn) {
+      closeBtn.onclick = () => {
+        navLinks.classList.remove("active");
+        document.body.classList.remove("menu-open"); // ✅ réactive le scroll
+      };
+    }
+
+</script>
+<script>
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.bio-toggle');
+    if (!btn) return;
+
+    const targetId = btn.getAttribute('aria-controls');
+    const more = document.getElementById(targetId);
+    if (!more) return;
+
+    const open = more.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open);
+    btn.textContent = open ? 'Lire moins' : 'Lire la suite';
+  });
+</script>
+<script>
+ document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    nom: form.nom.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  fetch(
+  "https://script.google.com/macros/s/AKfycbz0JfQ2DahVgOJKe-ffQ3FthQVb7Gu8DuyCSLv5Pkq9uXzKVdNf7xm4PViuoK414GZ58g/exec", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(res => res.json())
+  .then(response => {
+    if (response.status === "success") {
+      // Afficher le message
+      const msg = document.getElementById("successMsg");
+      msg.style.display = "block";
+
+      // Masquer après 5s
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 5000);
+
+      // Réinitialiser le formulaire
+      form.reset();
+    }
+  })
+  .catch(err => console.error("Erreur:", err));
+});
+</script>
+
+<main>
+{% block content %}{% endblock %}
+</main>
+</body>
+</html>
